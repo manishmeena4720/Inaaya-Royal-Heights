@@ -1397,9 +1397,19 @@
 	<link rel="icon" href="./assets/logo.jpg" sizes="192x192">
 	<link rel="apple-touch-icon" href="./assets/logo.jpg">
 	<meta name="msapplication-TileImage" content="./assets/logo.jpg">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>-->
 </head>
 
 
@@ -1407,8 +1417,87 @@
 <body
 	class="page-template-default page page-id-759 page-child parent-pageid-2 theme-estato woocommerce-no-js bt_bb_plugin_active bt_bb_fe_preview_toggle bodyPreloader btMenuRightEnabled btStickyEnabled btLightSkin btBelowMenu btNoSidebar"
 	data-autoplay="0">
-
-
+	<!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div style="width: 50%;" class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Contact Form</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<div class="boldRow ">
+				<div class="boldRowInner">
+					<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical" data-width="12">
+						<div class="container">
+							<div class="row">
+								<form class="col-md-12" action="https://formspree.io/f/moqyndge" method="POST" >
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group row">
+												<div class="col-sm-12">
+													<label for="staticEmail" class="col-sm-2 col-form-label">Name</label><br>
+												</div>
+												<div class="col-sm-12">
+													<input name="Name" type="text" class="form-control-plaintext" id="name" placeholder="Name">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group row">
+												<div class="col-sm-12">
+													<label for="inputPassword" class="col-sm-2 col-form-label">Phone</label><br>
+												</div>
+												<div class="col-sm-12">
+													<input name="Phone" type="text" class="form-control" id="phone" placeholder="Phone">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group row">
+												<div class="col-sm-12">
+													<label for="inputPassword" class="col-sm-2 col-form-label">Email</label><br>
+												</div>
+											    <div class="col-sm-12">
+													  <input name="Email" type="text" class="form-control" id="email" placeholder="Email">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<br>
+											<div class="form-group row">
+												<div class="col-sm-4"></div>
+												
+												<div class="col-sm-4"></div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<br>
+											<div class="form-group row">
+												<div class="col-sm-2"></div>
+												<div class="col-sm-4">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												</div>
+												<div class="col-sm-4">
+													<button style="background-color: rgb(211,153,46);border-color: rgb(211,153,46);" type="submit" class="btn btn-primary">Submit</button>
+												</div>
+												<div class="col-sm-2"></div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 	<div class="grid-lines">
 
@@ -1430,19 +1519,9 @@
 
 	</div>
 
-
-
-
-
-
 	<div class="btPageWrap" id="top">
-
-
-
 		<header class="mainHeader btClear gutter ">
-
 			<div class="port">
-
 				<div class="topBar btClear">
 					<div class="topBarPort btClear">
 						<div class="topTools btTopToolsLeft btTextLeft">
@@ -1475,15 +1554,10 @@
 				</div><!-- /topBar -->
 
 				<div class="btLogoArea menuHolder">
-
-
 					<span style="color: rgb(211,153,46);" class="btIco btIcoSmallSize btIcoDefaultType btIcoAccentColor">
 						<span style="color: rgb(211,153,46);" data-ico-fa="&#xf0c9;" class="btIcoHolder"></span>
 					</span>
-
 					<span class="btHorizontalMenuTrigger"></span>
-
-
 					<div class="logo">
 
 						<span>
@@ -1498,10 +1572,7 @@
 
 
 					<div class="menuPort">
-
-
 						<nav>
-
 							<ul id="menu-main-menu" class="menu">
 								<li id="menu-item-613"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-613">
@@ -1600,8 +1671,8 @@
 									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-943"><a
 										href="#map">Map</a></li>
 								<li id="menu-item-617"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a
-										href="#contact">Contact Us</a></li>
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a type="button" class="btn" data-toggle="modal" data-target="#exampleModal"
+										>Contact Us</a></li>
 								<!--<li id="menu-item-632"
 									class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
 									<a href="http://estato.bold-themes.com/property-sale/pages/news/">Pages</a>
@@ -1772,9 +1843,9 @@
 													<div class="rowItemContent">
 														<div class="slided autoSliderHeight" data-simple_arrows="no">
 															<div class="slidedItem firstItem"
-																data-thumb="./assets/cover.jpg">
+																data-thumb="./assets/cover0.jpg">
 																<div class="btSliderPort wBackground cover"
-																	style="background-image: url('./assets/cover.jpg')">
+																	style="background-image: url('./assets/cover0.jpg')">
 																	<!--./wp-content/uploads/sites/2/2016/09/estato-pool-bgn-4.jpg-->
 																	<div class="btSliderCell" data-slick="yes">
 																		<div class="btSlideGutter">
@@ -3040,6 +3111,76 @@
 														<div class="tilesWall btGridGallery tiled  btGridGap-20 lightbox"
 															data-col="5">
 															<div class="gridSizer"></div>
+
+
+															<div class="gridItem btGhostSliderThumb bt11"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/logo - Copy.jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/logo - Copy.jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/cover.jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/cover.jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
 															<div class="gridItem btGhostSliderThumb bt21"
 																data-order-num="0">
 																<div class="btTileBox">
@@ -3108,17 +3249,85 @@
 																	</div>
 																</div>
 															</div>
-															<div class="gridItem btGhostSliderThumb bt11"
+															<div class="gridItem btGhostSliderThumb bt21"
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/logo - Copy.jpg"
+																		<a href="./assets/pic (3).jpg"
 																			class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
-																						src="./assets/logo - Copy.jpg"
+																						src="./assets/pic (3).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt11"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (10).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (10).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt11"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (11).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (11).jpg"
 																						alt="Pic 1">
 																				</div>
 																			</div>
@@ -3180,13 +3389,285 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/cover.jpg"
+																		<a href="./assets/pic (5).jpg"
 																			class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
-																						src="./assets/cover.jpg"
+																						src="./assets/pic (5).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (6).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (6).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (7).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (7).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt11"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (13).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (13).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt11"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (14).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (14).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (8).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (8).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (9).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (9).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (12).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (12).jpg"
+																						alt="Pic 1">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="captionPane btDarkSkin">
+																			<div class="captionTable">
+																				<div class="captionCell">
+																					<div class="captionTxt">
+																						<header
+																							class="header btClear small btDash topDash">
+																							<div class="dash">
+																								<h4><span
+																										class="headline"></span>
+																								</h4>
+																							</div>
+																						</header>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="gridItem btGhostSliderThumb bt21"
+																data-order-num="0">
+																<div class="btTileBox">
+																	<div class="bpgPhoto ">
+																		<a href="./assets/pic (15).jpg"
+																			class="lightbox"
+																			data-title=""></a>
+																		<div class="boldPhotoBox">
+																			<div class="bpbItem">
+																				<div class="btImage"><img
+																						src="./assets/pic (15).jpg"
 																						alt="Pic 1">
 																				</div>
 																			</div>
@@ -3264,10 +3745,16 @@
 										</div>
 										<div class="boldRow ">
 											<div class="boldRowInner">
-												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
+												<div class="rowItem col-md-6 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
 													data-width="12">
 													<div class="rowItemContent">
 														<iframe width="560" height="315" src="https://www.youtube.com/embed/mqpiQOxMUcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+													</div>
+												</div>
+												<div class="rowItem col-md-6 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
+													data-width="12">
+													<div class="rowItemContent">
+														<iframe width="560" height="315" src="https://www.youtube.com/embed/5kzhE6cFsmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -5041,7 +5528,7 @@
 												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical" data-width="12">
 													<div class="container">
 														<div class="row">
-															<form action="https://formspree.io/f/moqyndge" method="POST" >
+															<form class="col-md-12" action="https://formspree.io/f/moqyndge" method="POST" >
 																<div class="row">
 																	<div class="col-sm-6">
 																		<div class="form-group row">
