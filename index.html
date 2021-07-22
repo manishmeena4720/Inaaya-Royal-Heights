@@ -22,6 +22,96 @@
 		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/estato.bold-themes.com\/property-sale\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2" } };
 		!function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);
 	</script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		/* Button used to open the contact form - fixed at the bottom of the page */
+		.open-button {
+			transform: translateY(-50%) rotate(90deg);
+			background-color: rgb(211, 153, 46);
+			color: white;
+			padding: 16px 20px;
+			border: none;
+			cursor: pointer;
+			position: fixed;
+			bottom: 45%;
+			right: -4%;
+			width: 170px;
+		}
+
+		/* The popup form - hidden by default */
+		.form-popup {
+			display: none;
+			position: fixed;
+			bottom: 20%;
+			right: 0%;
+			border: 3px solid #f1f1f1;
+			z-index: 9;
+		}
+
+		/* Add styles to the form container */
+		.form-container {
+			max-width: 300px;
+			padding: 10px;
+			background-color: white;
+		}
+
+		/* Full-width input fields */
+		.form-container input[type=text],
+		.form-container input[type=password] {
+			width: 100%;
+			padding: 15px;
+			margin: 5px 0 22px 0;
+			border: none;
+			background: #f1f1f1;
+		}
+
+		/* When the inputs get focus, do something */
+		.form-container input[type=text]:focus,
+		.form-container input[type=password]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+
+		/* Set a style for the submit/login button */
+		.form-container .btn {
+			background-color: #04AA6D;
+			color: white;
+			padding: 16px 20px;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+			opacity: 0.8;
+		}
+
+		/* Add a red background color to the cancel button */
+		.form-container .cancel {
+			background-color: red;
+		}
+
+		/* Add some hover effects to buttons */
+		.form-container .btn:hover,
+		.open-button:hover {
+			opacity: 1;
+		}
+
+		@media screen and (max-width: 1024px) {
+			.open-button {
+				top: auto;
+				transform: translateY(0) rotate(0deg);
+				bottom: 0;
+				left: 0;
+				width: 100%;
+			}
+		}
+	</style>
 	<style type="text/css">
 		img.wp-smiley,
 		img.emoji {
@@ -38,20 +128,20 @@
 	</style>
 	<link rel='stylesheet' id='dsidxpress-icons-css'
 		href='./wp-content/plugins/dsidxpress/css/dsidx-icons.css?ver=5.7.2' type='text/css' media='all'>
-	<link rel='stylesheet' id='dsidx-css' href='./combo-css.css?config=dsidxpress&#038;ver=3.13.2'
-		type='text/css' media='all'>
+	<link rel='stylesheet' id='dsidx-css' href='./combo-css.css?config=dsidxpress&#038;ver=3.13.2' type='text/css'
+		media='all'>
 	<link rel='stylesheet' id='dsidxpress-unconditional-css'
 		href='./wp-content/plugins/dsidxpress/css/client.css?ver=5.7.2' type='text/css' media='all'>
 	<link rel='stylesheet' id='dsidxwidgets-unconditional-css'
 		href='./wp-content/plugins/dsidxpress/dsidxwidgets/css/client.css?ver=5.7.2' type='text/css' media='all'>
-	<link rel='stylesheet' id='wp-block-library-css'
-		href='./wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all'>
+	<link rel='stylesheet' id='wp-block-library-css' href='./wp-includes/css/dist/block-library/style.min.css?ver=5.7.2'
+		type='text/css' media='all'>
 	<link rel='stylesheet' id='wc-block-vendors-style-css'
 		href='./wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=4.9.1'
 		type='text/css' media='all'>
 	<link rel='stylesheet' id='wc-block-style-css'
-		href='./wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=4.9.1'
-		type='text/css' media='all'>
+		href='./wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=4.9.1' type='text/css'
+		media='all'>
 	<link rel='stylesheet' id='bt_dev_style-css'
 		href='http://estato.bold-themes.com/property-sale/wp-content/plugins/bt_dev/style.css?ver=5.7.2' type='text/css'
 		media='all'>
@@ -62,8 +152,8 @@
 	</style>
 	<link rel='stylesheet' id='contact-form-7-css'
 		href='./wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.1' type='text/css' media='all'>
-	<link rel='stylesheet' id='estato-style-css' href='./wp-content/themes/estato/style.css?ver=5.7.2'
-		type='text/css' media='all'>
+	<link rel='stylesheet' id='estato-style-css' href='./wp-content/themes/estato/style.css?ver=5.7.2' type='text/css'
+		media='all'>
 	<style id='estato-style-inline-css' type='text/css'>
 		.btDarkSkin input:not([type='checkbox']):not([type='radio']).wpcf7-submit,
 		.btLightSkin .btDarkSkin input:not([type='checkbox']):not([type='radio']).wpcf7-submit,
@@ -174,7 +264,7 @@
 		}
 
 		.btLogoArea .logo span a:before {
-			background-color: rgb(211,153,46);
+			background-color: rgb(211, 153, 46);
 		}
 
 		.btLogoArea .logo span a:after {
@@ -182,7 +272,7 @@
 		}
 
 		.btVerticalMenuTrigger:before {
-			color: rgb(211,153,46);
+			color: rgb(211, 153, 46);
 		}
 
 		.btVerticalMenuTrigger:hover:before {
@@ -215,8 +305,8 @@
 		}
 
 		.btMenuHorizontal .menuPort nav {
-			background-color: rgb(211,153,46);
-			background: rgb(211,153,46) url(gfx/shadow.png) no-repeat 0 0 / auto 100%;
+			background-color: rgb(211, 153, 46);
+			background: rgb(211, 153, 46) url(gfx/shadow.png) no-repeat 0 0 / auto 100%;
 		}
 
 		html:not(.touch) body.btMenuRight.btMenuHorizontal .menuPort>nav>ul>li.btMenuWideDropdown>ul>li>a,
@@ -258,7 +348,7 @@
 		}
 
 		.btMenuVertical .menuPort {
-			background-color: rgb(211,153,46);
+			background-color: rgb(211, 153, 46);
 		}
 
 		a.btIconWidget:hover {
@@ -311,11 +401,11 @@
 
 		.topBar .widget_search button:hover,
 		.topBarInMenu .widget_search button:hover {
-			background: rgb(211,153,46);
+			background: rgb(211, 153, 46);
 		}
 
 		.btSearchInner.btFromTopBox {
-			background: rgb(211,153,46);
+			background: rgb(211, 153, 46);
 		}
 
 		.btSearchInner.btFromTopBox input[type="text"]:focus {
@@ -328,12 +418,12 @@
 		}
 
 		.btSiteFooterWidgets {
-			background-color: rgb(231,199,138);
+			background-color: rgb(231, 199, 138);
 		}
 
 		.btSiteFooter {
 			font-family: Montserrat;
-			background-color: rgb(211,153,46);
+			background-color: rgb(211, 153, 46);
 		}
 
 		.sticky .headline:before {
@@ -384,7 +474,7 @@
 
 		.btBox>h4:after,
 		.btCustomMenu>h4:after {
-			background-color: rgb(211,153,46);
+			background-color: rgb(211, 153, 46);
 		}
 
 		.btBox ul li a:hover,
@@ -503,7 +593,7 @@
 
 		.btBox .tagcloud a,
 		.btTags ul a {
-			background: rgb(211,153,46);
+			background: rgb(211, 153, 46);
 		}
 
 		.btBox .tagcloud a:hover,
@@ -1334,16 +1424,15 @@
 			background: rgba(255, 255, 255, .85);
 		}
 	</style>
-	<link rel='stylesheet' id='estato-magnific-popup-css'
-		href='./wp-content/themes/estato/magnific-popup.css?ver=5.7.2' type='text/css' media='all'>
+	<link rel='stylesheet' id='estato-magnific-popup-css' href='./wp-content/themes/estato/magnific-popup.css?ver=5.7.2'
+		type='text/css' media='all'>
 	<link rel='stylesheet' id='estato-fonts-css'
 		href='./css.css?family=Pavanam%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0'
 		type='text/css' media='all'>
 	<link rel='stylesheet' id='jquery-ui-smoothness-css'
 		href='./wp-content/plugins/contact-form-7/includes/js/jquery-ui/themes/smoothness/jquery-ui.min.css?ver=1.12.1'
 		type='text/css' media='screen'>
-	<script type='text/javascript' src='./wp-includes/js/jquery/jquery.min.js?ver=3.5.1'
-		id='jquery-core-js'></script>
+	<script type='text/javascript' src='./wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 	<script type='text/javascript' src='./wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
 		id='jquery-migrate-js'></script>
 	<script type='text/javascript'
@@ -1403,10 +1492,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
 	<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>-->
@@ -1417,8 +1511,7 @@
 <body
 	class="page-template-default page page-id-759 page-child parent-pageid-2 theme-estato woocommerce-no-js bt_bb_plugin_active bt_bb_fe_preview_toggle bodyPreloader btMenuRightEnabled btStickyEnabled btLightSkin btBelowMenu btNoSidebar"
 	data-autoplay="0">
-	<!-- Button trigger modal -->
-  <!-- Modal
+	<!-- Modal
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div style="width: 50%;" class="modal-dialog">
 	  <div class="modal-content">
@@ -1496,8 +1589,7 @@
 	  </div>
 	</div>
   </div>-->
-
-  <!--
+	<!--
 	  <div class="modal-body">
 			<div class="boldRow ">
 				<div class="boldRowInner">
@@ -1568,23 +1660,14 @@
   -->
 
 	<div class="grid-lines">
-
 		<div class="container">
-
 			<div class="row">
-
 				<div class="col-xs-3 col"></div>
-
 				<div class="col-xs-3 col"></div>
-
 				<div class="col-xs-3 col"></div>
-
 				<div class="col-xs-3 col"></div>
-
 			</div>
-
 		</div>
-
 	</div>
 
 	<div class="btPageWrap" id="top">
@@ -1622,17 +1705,15 @@
 				</div><!-- /topBar -->
 
 				<div class="btLogoArea menuHolder">
-					<span style="color: rgb(211,153,46);" class="btIco btIcoSmallSize btIcoDefaultType btIcoAccentColor">
+					<span class="btVerticalMenuTrigger" style="color: rgb(211,153,46);"
+						class="btIco btIcoSmallSize btIcoDefaultType btIcoAccentColor">
+						<img src="./assets/favicon-2.png" alt="">
 						<span style="color: rgb(211,153,46);" data-ico-fa="&#xf0c9;" class="btIcoHolder"></span>
 					</span>
 					<span class="btHorizontalMenuTrigger"></span>
 					<div class="logo">
-
 						<span>
-
-							<a href="#"><img class="btMainLogo"
-									data-hw="1.9184615384615"
-									src="./assets/logo.jpg"
+							<a href="#"><img class="btMainLogo" data-hw="1.9184615384615" src="./assets/logo.jpg"
 									alt="Property Sale"></a>
 						</span>
 
@@ -1739,7 +1820,7 @@
 									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-943"><a
 										href="#map">Map</a></li>
 								<li id="menu-item-617"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a 
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a
 										href="#contact">Contact Us</a></li>
 								<!--<li id="menu-item-632"
 									class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
@@ -1911,9 +1992,9 @@
 													<div class="rowItemContent">
 														<div class="slided autoSliderHeight" data-simple_arrows="no">
 															<div class="slidedItem firstItem"
-																data-thumb="./assets/cover0.jpg">
+																data-thumb="./assets/INAAYA\ 3.jpg">
 																<div class="btSliderPort wBackground cover"
-																	style="background-image: url('./assets/cover0.jpg')">
+																	style="background-image: url('./assets/INAAYA\ 3.jpg')">
 																	<!--./wp-content/uploads/sites/2/2016/09/estato-pool-bgn-4.jpg-->
 																	<div class="btSliderCell" data-slick="yes">
 																		<div class="btSlideGutter">
@@ -1924,7 +2005,8 @@
 																				</div>
 																				<div class="boldRow ">
 																					<div class="boldRowInner">
-																						<div class="rowItem rowInnerItem col-md-3  btTextLeft">
+																						<div
+																							class="rowItem rowInnerItem col-md-3  btTextLeft">
 																							<div class="rowItemContent">
 																							</div>
 																						</div>
@@ -1944,13 +2026,20 @@
 																									</div>
 																									<div
 																										class="btSubTitle">
-																											01/20 & 01/21, Gomti Nagar Extension, <br>
-																											Opposite G-7 Janeshwar Mishra Park, <br>
-																											Lucknow, Uttar Pradesh, India</div>
+																										01/20 & 01/21,
+																										Gomti Nagar
+																										Extension, <br>
+																										Opposite G-7
+																										Janeshwar Mishra
+																										Park, <br>
+																										Lucknow, Uttar
+																										Pradesh, India
+																									</div>
 																								</header>
 																								<div
 																									class="btIconImageRow">
-																									<img src="./assets/pic (5).jpg" alt="">
+																									<img src="./assets/pic (5).jpg"
+																										alt="">
 																									<!--<div
 																										class="servicesItem  btIcoAccentColorIcon btIcoSmallSizeIcon ">
 																										<div
@@ -2040,7 +2129,8 @@
 																								</div>
 																							</div>
 																						</div>
-																						<div class="rowItem rowInnerItem col-md-3  btTextLeft">
+																						<div
+																							class="rowItem rowInnerItem col-md-3  btTextLeft">
 																							<div class="rowItemContent">
 																							</div>
 																						</div>
@@ -2063,8 +2153,10 @@
 																								<header
 																									class="header btClear small">
 																									<div class="dash">
-																										<h4><span 
-																												class="headline">Inaaya Royal Heights</span>
+																										<h4><span
+																												class="headline">Inaaya
+																												Royal
+																												Heights</span>
 																										</h4>
 																									</div>
 																								</header>
@@ -2125,13 +2217,21 @@
 																									</div>
 																									<div
 																										class="btSubTitle">
-																											01/20 & 01/21, Gomti Nagar Extension, <br>
-																											Opposite G-7 Janeshwar Mishra Park, <br>
-																											Lucknow, Uttar Pradesh, India</div>
+																										01/20 & 01/21,
+																										Gomti Nagar
+																										Extension, <br>
+																										Opposite G-7
+																										Janeshwar Mishra
+																										Park, <br>
+																										Lucknow, Uttar
+																										Pradesh, India
+																									</div>
 																								</header>
 																								<div
 																									class="btIconImageRow">
-																									<img style="width: 100px;" src="./assets/logo.jpg" alt="">
+																									<img style="width: 100px;"
+																										src="./assets/logo.jpg"
+																										alt="">
 																									<!--<div
 																										class="servicesItem  btIcoAccentColorIcon btIcoSmallSizeIcon ">
 																										<div
@@ -2245,8 +2345,10 @@
 																								<header
 																									class="header btClear small">
 																									<div class="dash">
-																										<h4><span 
-																												class="headline">Inaaya Royal Heights</span>
+																										<h4><span
+																												class="headline">Inaaya
+																												Royal
+																												Heights</span>
 																										</h4>
 																									</div>
 																								</header>
@@ -2307,13 +2409,21 @@
 																									</div>
 																									<div
 																										class="btSubTitle">
-																											01/20 & 01/21, Gomti Nagar Extension, <br>
-																											Opposite G-7 Janeshwar Mishra Park, <br>
-																											Lucknow, Uttar Pradesh, India</div>
+																										01/20 & 01/21,
+																										Gomti Nagar
+																										Extension, <br>
+																										Opposite G-7
+																										Janeshwar Mishra
+																										Park, <br>
+																										Lucknow, Uttar
+																										Pradesh, India
+																									</div>
 																								</header>
 																								<div
 																									class="btIconImageRow">
-																									<img style="width: 100px;" src="./assets/logo.jpg" alt="">
+																									<img style="width: 100px;"
+																										src="./assets/logo.jpg"
+																										alt="">
 																									<!--<div
 																										class="servicesItem  btIcoAccentColorIcon btIcoSmallSizeIcon ">
 																										<div
@@ -2427,8 +2537,10 @@
 																								<header
 																									class="header btClear small">
 																									<div class="dash">
-																										<h4><span 
-																												class="headline">Inaaya Royal Heights</span>
+																										<h4><span
+																												class="headline">Inaaya
+																												Royal
+																												Heights</span>
 																										</h4>
 																									</div>
 																								</header>
@@ -3142,12 +3254,13 @@
 														<header
 															class="header btClear large btDash topDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">Property photos</span></h2>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">Property photos</span></h2>
 															</div>
 														</header>
 														<div class="btText">
 															<p>
-																
+
 															</p>
 														</div>
 													</div>
@@ -3181,8 +3294,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/cover.jpg"
-																			class="lightbox"
+																		<a href="./assets/cover.jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3215,8 +3327,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (1).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (1).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3249,8 +3360,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (2).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (2).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3283,8 +3393,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (3).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (3).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3488,8 +3597,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (4).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (4).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3522,8 +3630,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (5).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (5).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3556,8 +3663,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (6).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (6).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3590,8 +3696,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (7).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (7).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3624,8 +3729,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (8).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (8).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3658,8 +3762,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (9).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (9).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3692,8 +3795,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (12).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (12).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3726,8 +3828,7 @@
 																data-order-num="0">
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
-																		<a href="./assets/pic (15).jpg"
-																			class="lightbox"
+																		<a href="./assets/pic (15).jpg" class="lightbox"
 																			data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
@@ -3781,12 +3882,13 @@
 														<header
 															class="header btClear large btDash topDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">Video Gallery</span></h2>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">Video Gallery</span></h2>
 															</div>
 														</header>
 														<div class="btText">
 															<p>
-																
+
 															</p>
 														</div>
 													</div>
@@ -3813,13 +3915,21 @@
 												<div class="rowItem col-md-6 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
 													data-width="12">
 													<div class="rowItemContent">
-														<iframe width="560" height="315" src="https://www.youtube.com/embed/mqpiQOxMUcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+														<iframe width="560" height="315"
+															src="https://www.youtube.com/embed/mqpiQOxMUcg"
+															title="YouTube video player" frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+															allowfullscreen></iframe>
 													</div>
 												</div>
 												<div class="rowItem col-md-6 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
 													data-width="12">
 													<div class="rowItemContent">
-														<iframe width="560" height="315" src="https://www.youtube.com/embed/5kzhE6cFsmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+														<iframe width="560" height="315"
+															src="https://www.youtube.com/embed/5kzhE6cFsmU"
+															title="YouTube video player" frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+															allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -3846,12 +3956,13 @@
 														<header
 															class="header btClear large btDash topDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">Property Layouts</span></h2>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">Property Layouts</span></h2>
 															</div>
 														</header>
 														<div class="btText">
 															<p>
-																
+
 															</p>
 														</div>
 													</div>
@@ -3886,8 +3997,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (1).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -3904,7 +4014,8 @@
 																							class="header btClear small btDash topDash">
 																							<div class="dash">
 																								<h4><span
-																										class="headline">Building Layout</span>
+																										class="headline">Building
+																										Layout</span>
 																								</h4>
 																							</div>
 																						</header>
@@ -3920,8 +4031,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (2).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -3938,7 +4048,8 @@
 																							class="header btClear small btDash topDash">
 																							<div class="dash">
 																								<h4><span
-																										class="headline">4A & 4A1</span>
+																										class="headline">4A
+																										& 4A1</span>
 																								</h4>
 																							</div>
 																						</header>
@@ -3954,8 +4065,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (3).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -3988,8 +4098,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (4).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4022,8 +4131,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (5).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4056,8 +4164,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (6).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4090,8 +4197,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (7).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4124,8 +4230,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (8).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4158,8 +4263,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (9).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4192,8 +4296,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (10).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4226,8 +4329,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (11).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4260,8 +4362,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (12).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4278,7 +4379,8 @@
 																							class="header btClear small btDash topDash">
 																							<div class="dash">
 																								<h4><span
-																										class="headline">3C & 3CC</span>
+																										class="headline">3C
+																										& 3CC</span>
 																								</h4>
 																							</div>
 																						</header>
@@ -4294,8 +4396,7 @@
 																<div class="btTileBox">
 																	<div class="bpgPhoto ">
 																		<a href="./assets/layout/pic (13).png"
-																			class="lightbox"
-																			data-title=""></a>
+																			class="lightbox" data-title=""></a>
 																		<div class="boldPhotoBox">
 																			<div class="bpbItem">
 																				<div class="btImage"><img
@@ -4348,12 +4449,13 @@
 														<header
 															class="header btClear large btDash topDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">Downloads</span></h2>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">Downloads</span></h2>
 															</div>
 														</header>
 														<div class="btText">
 															<p>
-																
+
 															</p>
 														</div>
 													</div>
@@ -4377,11 +4479,13 @@
 										</div>
 										<div class="boldRow ">
 											<div class="boldRowInner">
-												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical" data-width="12">
+												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
+													data-width="12">
 													<div class="container">
 														<div class="row">
 															<div class="col-md-4">
-																<a target="_blank" href="./assets/New Inaaya Royal Brochure_Last V.pdf">
+																<a target="_blank"
+																	href="./assets/New Inaaya Royal Brochure_Last V.pdf">
 																	<img src="./assets/downloads.png">
 																</a>
 															</div>
@@ -5338,7 +5442,8 @@
 														<header
 															class="header btClear large btDash topDash  btAlternateHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">Company Representative</span>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">Company Representative</span>
 																</h2>
 															</div>
 														</header>
@@ -5372,8 +5477,7 @@
 													data-width="3">
 													<div class="rowItemContent" style="background-color:#f3f0ef;">
 														<div class="bpgPhoto ">
-															<div class="btImage"><img
-																	src="./assets/marketing2.jpg"
+															<div class="btImage"><img src="./assets/marketing2.jpg"
 																	alt="Mr. Kunal Sharma">
 															</div>
 														</div>
@@ -5385,27 +5489,33 @@
 												<div class="rowItem col-md-6 col-sm-6 col-ms-12 btTextCenter animate animate-fadein animate-moveup btTextIndent inherit"
 													data-width="3">
 													<div class="rowItemContent" style="background-color:#f3f0ef;">
-														<div style="height: 230px;" class="btClear btSeparator topSmallSpaced noBorder">
+														<div style="height: 230px;"
+															class="btClear btSeparator topSmallSpaced noBorder">
 															<hr>
 														</div>
 														<br>
 														<header
 															class="header btClear small btDash bottomDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h3><span class="headline"><strong>Mr. Kunal Raj Sharma</strong></span></h3>
+																<h3><span class="headline"><strong>Mr. Kunal Raj
+																			Sharma</strong></span></h3>
 															</div>
 															<div class="btSubTitle">Company Representative</div>
 															<br><br>
 														</header>
 														<br>
-															<div class="btSubTitle"><h6>Phone : <strong>+91 999 999 8627</strong></h6></div>
-															<br>
-															<div class="btSubTitle"><h6>Email : <strong>ksharma20100@gmail.com</strong></h6></div>
+														<div class="btSubTitle">
+															<h6>Phone : <strong>+91 999 999 8627</strong></h6>
+														</div>
+														<br>
+														<div class="btSubTitle">
+															<h6>Email : <strong>ksharma20100@gmail.com</strong></h6>
+														</div>
 														<div class="btClear btSeparator topExtraSmallSpaced noBorder">
 															<hr>
 														</div>
 														<div class="btText">
-															
+
 														</div>
 														<div class="btClear btSeparator topSmallSpaced noBorder">
 															<hr>
@@ -5423,8 +5533,9 @@
 																	href="https://www.pinterest.com" target="no_target"
 																	data-ico-fa="&#xf0d5;"
 																	class="btIcoHolder"></a></span>
-															</div>
-														<div class="btClear btSeparator topSmallSpaced bottomExtraSmallSpaced noBorder">
+														</div>
+														<div
+															class="btClear btSeparator topSmallSpaced bottomExtraSmallSpaced noBorder">
 															<hr>
 														</div>
 													</div>
@@ -5532,7 +5643,9 @@
 							</div>
 						</section>
 						<section id="map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1345556960223!2d81.00191801504326!3d26.83567228316093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be399f243a0bd%3A0x3260a7c5b0b5e916!2sInaaya%20Royal%20Heights!5e0!3m2!1sen!2sin!4v1625311293322!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1345556960223!2d81.00191801504326!3d26.83567228316093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be399f243a0bd%3A0x3260a7c5b0b5e916!2sInaaya%20Royal%20Heights!5e0!3m2!1sen!2sin!4v1625311293322!5m2!1sen!2sin"
+								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 						</section>
 						<section id="form">
 							<div class="port">
@@ -5543,7 +5656,7 @@
 												<div class="rowItem col-md-12 col-ms-12  btTextLeft" data-width="12">
 													<div class="rowItemContent">
 														<div class="btClear btSeparator topSemiSpaced noBorder">
-															
+
 														</div>
 													</div>
 												</div>
@@ -5561,12 +5674,13 @@
 														<header
 															class="header btClear large btDash topDash  btAccentHeadlineColor">
 															<div class="dash">
-																<h2><span style="color: rgb(211,153,46);" class="headline">For More Queries</span></h2>
+																<h2><span style="color: rgb(211,153,46);"
+																		class="headline">For More Queries</span></h2>
 															</div>
 														</header>
 														<div class="btText">
 															<p>
-																
+
 															</p>
 														</div>
 													</div>
@@ -5582,7 +5696,7 @@
 												<div class="rowItem col-md-12 col-ms-12  btTextLeft" data-width="12">
 													<div class="rowItemContent">
 														<div class="btClear btSeparator topSemiSpaced noBorder">
-														
+
 														</div>
 													</div>
 												</div>
@@ -5590,38 +5704,51 @@
 										</div>
 										<div class="boldRow ">
 											<div class="boldRowInner">
-												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical" data-width="12">
+												<div class="rowItem col-md-12 col-ms-12  btTextCenter animate animate-fadein btTopVertical"
+													data-width="12">
 													<div class="container">
 														<div class="row">
-															<form class="col-md-12" action="https://formspree.io/f/moqyndge" method="POST" >
+															<form class="col-md-12"
+																action="https://formspree.io/f/moqyndge" method="POST">
 																<div class="row">
 																	<div class="col-sm-6">
 																		<div class="form-group row">
-																			<label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+																			<label for="staticEmail"
+																				class="col-sm-2 col-form-label">Name</label>
 																			<div class="col-sm-10">
-																				<input name="Name" type="text" class="form-control-plaintext" id="name" placeholder="Name">
+																				<input name="Name" type="text"
+																					class="form-control-plaintext"
+																					id="name" placeholder="Name">
 																			</div>
 																		</div>
 																		<br>
 																		<div class="form-group row">
-																			<label for="inputPassword" class="col-sm-2 col-form-label">Phone</label>
+																			<label for="inputPassword"
+																				class="col-sm-2 col-form-label">Phone</label>
 																			<div class="col-sm-10">
-																				<input name="Phone" type="text" class="form-control" id="phone" placeholder="Phone">
+																				<input name="Phone" type="text"
+																					class="form-control" id="phone"
+																					placeholder="Phone">
 																			</div>
 																		</div>
 																		<br>
 																		<div class="form-group row">
-																			<label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+																			<label for="inputPassword"
+																				class="col-sm-2 col-form-label">Email</label>
 																			<div class="col-sm-10">
-																				  <input name="Email" type="text" class="form-control" id="email" placeholder="Email">
+																				<input name="Email" type="text"
+																					class="form-control" id="email"
+																					placeholder="Email">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group row">
-																			<label for="inputPassword" class="col-sm-2 col-form-label">Query</label>
+																			<label for="inputPassword"
+																				class="col-sm-2 col-form-label">Query</label>
 																			<div class="col-sm-10">
-																				<textarea name="Query"placeholder="Write your Query here..."></textarea>
+																				<textarea name="Query"
+																					placeholder="Write your Query here..."></textarea>
 																			</div>
 																		</div>
 																		<br>
@@ -5629,7 +5756,10 @@
 																		<div class="form-group row">
 																			<div class="col-sm-4"></div>
 																			<div class="col-sm-4">
-																				<button style="background-color: rgb(211,153,46);border-color: rgb(211,153,46);" type="submit" class="btn btn-primary">Submit</button>
+																				<button
+																					style="background-color: rgb(211,153,46);border-color: rgb(211,153,46);"
+																					type="submit"
+																					class="btn btn-primary">Submit</button>
 																			</div>
 																			<div class="col-sm-4"></div>
 																		</div>
@@ -5646,7 +5776,7 @@
 												<div class="rowItem col-md-12 col-ms-12  btTextLeft" data-width="12">
 													<div class="rowItemContent">
 														<div class="btClear btSeparator topSemiSpaced noBorder">
-														
+
 														</div>
 													</div>
 												</div>
@@ -6694,24 +6824,30 @@
 
 						<div class="rowItem btFooterCopy col-md-6 col-sm-12 btTextLeft">
 
-							<p class="copyLine">Copyright 2021 by <a href="https://www.Homeplanify.com" target="_blank"><strong>Homeplanify</strong></a>: Digital Partner. All rights reserved.</p>
+							<p class="copyLine">Copyright 2021 by <a href="https://www.Homeplanify.com"
+									target="_blank"><strong>Homeplanify</strong></a>: Digital Partner. All rights
+								reserved.</p>
 						</div><!-- /copy -->
 
 						<div class="rowItem btFooterMenu col-md-6 col-sm-12 btTextRight">
 
 							<ul id="menu-main-menu-1" class="menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-613">
-									<a href="#">Home</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-616">
-									<a href="#gallery">Gallery</a></li>
+								<li
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-613">
+									<a href="#">Home</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-616">
+									<a href="#gallery">Gallery</a>
+								</li>
 								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-620"><a
-									href="#downloads">Downloads</a></li>
+										href="#downloads">Downloads</a></li>
 								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-943"><a
-									href="#layout">Layouts</a></li>
+										href="#layout">Layouts</a></li>
 								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a
-									href="#map">Map</a></li>
+										href="#map">Map</a></li>
 								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a
-									href="#contact">Contact Us</a></li>
+										href="#contact">Contact Us</a></li>
 								<!--<li
 									class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
 									<a href="http://estato.bold-themes.com/property-sale/pages/news/">Pages</a></li>
@@ -6777,8 +6913,7 @@
 			});
 
 	</script>
-	<script src="./recaptcha/api.js?onload=wp_recaptchaLoadCallback&#038;render=explicit" async=""
-		defer=""></script>
+	<script src="./recaptcha/api.js?onload=wp_recaptchaLoadCallback&#038;render=explicit" async="" defer=""></script>
 	<!-- END recaptcha -->
 	<script type="text/javascript">
 		(function () {
@@ -6805,8 +6940,7 @@
 		id='jquery-ui-dialog-js'></script>
 	<script type='text/javascript' src='./wp-content/plugins/dsidxpress/js/widget-client.js?ver=3.13.2'
 		id='dsidxpress_widget_search_view-js'></script>
-	<script type='text/javascript' src='./wp-includes/js/comment-reply.min.js?ver=5.7.2'
-		id='comment-reply-js'></script>
+	<script type='text/javascript' src='./wp-includes/js/comment-reply.min.js?ver=5.7.2' id='comment-reply-js'></script>
 	<script type='text/javascript'
 		src='./wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'
 		id='jquery-blockui-js'></script>
@@ -6818,8 +6952,7 @@
 	<script type='text/javascript'
 		src='./wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.3.0'
 		id='wc-add-to-cart-js'></script>
-	<script type='text/javascript'
-		src='./wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'
+	<script type='text/javascript' src='./wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'
 		id='js-cookie-js'></script>
 	<script type='text/javascript' id='woocommerce-js-extra'>
 		/* <![CDATA[ */
@@ -6855,12 +6988,10 @@
 		id='slick-min-js'></script>
 	<script type='text/javascript' src='./wp-content/themes/estato/js/jquery.magnific-popup.min.js?ver=5.7.2'
 		id='jquery-magnific-popup-min-js'></script>
-	<script type='text/javascript' src='./wp-content/themes/estato/js/iscroll.js?ver=5.7.2'
-		id='iscroll-js'></script>
+	<script type='text/javascript' src='./wp-content/themes/estato/js/iscroll.js?ver=5.7.2' id='iscroll-js'></script>
 	<script type='text/javascript' src='./wp-content/themes/estato/js/fancySelect.js?ver=5.7.2'
 		id='fancySelect-js'></script>
-	<script type='text/javascript' src='./wp-content/themes/estato/js/misc.js?ver=5.7.2'
-		id='estato-misc-js'></script>
+	<script type='text/javascript' src='./wp-content/themes/estato/js/misc.js?ver=5.7.2' id='estato-misc-js'></script>
 	<script type='text/javascript' id='estato-misc-js-after'>
 		jQuery('input').on('keydown', function (e) { e.stopPropagation() })
 	</script>
@@ -6940,11 +7071,9 @@
 		id='boldthemes_grid_tweak-js'></script>
 	<script type='text/javascript' src='./wp-content/plugins/estato/bt_grid_gallery.js?ver=5.7.2'
 		id='boldthemes_grid_gallery-js'></script>
-	<script type='text/javascript'
-		src='./maps/api/js-1?key=AIzaSyCsdbQUq1QaP-0yXrNtClJ5nfoTIFxFVo8&#038;ver=5.7.2'
+	<script type='text/javascript' src='./maps/api/js-1?key=AIzaSyCsdbQUq1QaP-0yXrNtClJ5nfoTIFxFVo8&#038;ver=5.7.2'
 		id='gmaps_api-js'></script>
-	<script type='text/javascript' src='./wp-content/plugins/estato/bt_gmap.js?ver=5.7.2'
-		id='bt_gmap_init-js'></script>
+	<script type='text/javascript' src='./wp-content/plugins/estato/bt_gmap.js?ver=5.7.2' id='bt_gmap_init-js'></script>
 
 
 
@@ -6953,134 +7082,62 @@
 
 
 
-		<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-	transform: translateY(-50%) rotate(90deg);
-  background-color: rgb(211,153,46);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 45%;
-  right: -8%;
-  width: 280px;
-}
 
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 20%;
-  right: 0%;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-</style>
-</head>
-<body>
-
-<button class="open-button" onclick="openForm()">Enquire Now</button>
-<div class="form-popup" id="myForm">
-	<form class="col-md-12 form-container" action="https://formspree.io/f/moqyndge" method="POST">
-		<div class="row">
-			<div class="col-sm-12">
-				<h4 style="text-align: center;">Enquire Now</h4>
+	<button class="open-button" onclick="openForm()">Enquire Now</button>
+	<div class="form-popup" id="myForm">
+		<form class="form-container" action="https://formspree.io/f/moqyndge" method="POST">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4 style="text-align: center;">Enquire Now</h4>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="form-group row">
-					<div class="col-sm-12">
-						<input name="Name" type="text" class="form-control-plaintext" id="name" placeholder="Name">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group row">
+						<div class="col-sm-12">
+							<input name="Name" type="text" class="form-control-plaintext" id="name" placeholder="Name">
+						</div>
+						<div class="col-sm-12">
+							<input name="Phone" type="text" class="form-control" id="phone" placeholder="Phone">
+						</div>
+						<div class="col-sm-12">
+							<input name="Email" type="text" class="form-control" id="email" placeholder="Email">
+						</div>
 					</div>
-					<div class="col-sm-12">
-						<input name="Phone" type="text" class="form-control" id="phone" placeholder="Phone">
-					</div>
-					<div class="col-sm-12">
-						  <input name="Email" type="text" class="form-control" id="email" placeholder="Email">
+				</div>
+				<div class="col-sm-12">
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+						</div>
+						<div class="col-sm-6">
+							<button style="background-color: rgb(211,153,46);border-color: rgb(211,153,46);"
+								type="submit" class="btn btn-primary">Submit</button>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-12">
-				<div class="form-group row">
-					<div class="col-sm-6">
-						<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-					</div>
-					<div class="col-sm-6">
-						<button style="background-color: rgb(211,153,46);border-color: rgb(211,153,46);" type="submit" class="btn btn-primary">Submit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</form>
-</div>
+		</form>
+	</div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+	<script>
+		function openForm() {
+			var x = document.getElementById("myForm");
+			
+  			if (x.style.display === "none") {
+    			x.style.display = "block";
+  			} else {
+    			x.style.display = "none";
+  			}
+		}
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
+		function closeForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+  			
 
-</body>
-</html>
+	</script>
 
 </body>
 
